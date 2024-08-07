@@ -17,3 +17,13 @@ export async function PUT(request,{params}){
 
     return NextResponse.json({result:"user detail updated",success:true},{status:200});
 }
+
+export async function DELETE(request,{params}){
+    const id=params.userid;
+    if(id){
+        return NextResponse.json({result:"user deleted successfully",success:true},{status:200});
+    }
+    return NextResponse.json({result:"Internal error , please try after some time",success:false},{status:400});
+
+    
+}
