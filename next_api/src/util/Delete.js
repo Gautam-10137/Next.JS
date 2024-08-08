@@ -7,7 +7,8 @@ export default function Delete({id}){
        });
        response=await response.json();
        if(response.success){
-        alert(`user with id ${id} is deleted successfully`);
+        alert(`user with id ${id} is
+             deleted successfully`);
        }
        else{
         alert("client error while deleting user");
