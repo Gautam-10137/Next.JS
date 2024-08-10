@@ -13,6 +13,8 @@ export default function Create(){
         });
         response=await response.json();
         if(response.success){
+
+            router.refresh();
              router.push("/users");
         }
         else{

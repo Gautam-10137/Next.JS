@@ -12,7 +12,7 @@ export default function User({params}){
     
     useEffect(()=>{
         async function getUser(id){
-            let res= await fetch("http://localhost:3000/api/users/"+id,{cache:"no-store"});
+            let res= await fetch("http://localhost:3000/api/users/"+id,{cache:"no-cache"});
             res= await res.json();
             const user=res.result;
             setName( user.name);
